@@ -7,10 +7,30 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
+.pnp
+.pnp.js
+
+# Build outputs
 dist
 dist-ssr
+build
 *.local
+
+# Environment variables - NEVER commit these (contains Appwrite keys!)
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+
+# Vite cache
+.vite
+vite.config.js.timestamp-*
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +42,36 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+Thumbs.db
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Testing
+coverage
+*.lcov
+.nyc_output
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional npm cache
+.npm
+
+# ESLint cache
+.eslintcache
+
+# Parcel cache
+.cache
+.parcel-cache
+
+# Temporary files
+tmp
+temp
+*.tmp
+*.temp

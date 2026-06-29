@@ -11,6 +11,7 @@ function App() {
   const dispatch = useDispatch();
   
 useEffect(() => {
+  // Proper error handling and add arrow function appropriately
     authService.getCurrentUser()
         .then((userData) => {
             if (userData) {
@@ -23,11 +24,13 @@ useEffect(() => {
 }, [dispatch]);
 
   return !loading ? (
+    // Without <Outlet/> component and with procted routes without authentication use 
+    // should not be able to see posta and can not create post
     <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
       <div className='w-full block'>
         <Header />
         <main>
-          <Outlet />
+          <Outlet /> 
         </main>
         <Footer />
       </div>
